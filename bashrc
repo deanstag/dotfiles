@@ -35,6 +35,6 @@ export HISTSIZE=100000
 eval `dircolors ~/.solarized-ls-colors`
 
 if [ -f ~/.bashrc_cisco ]; then
-   echo "Sourcing cisco bashrc"   
+#   echo "Sourcing cisco bashrc"   
    source ~/.bashrc_cisco
 fi
