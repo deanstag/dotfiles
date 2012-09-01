@@ -3,16 +3,10 @@
 #      Bourne again shell
 ####################################################################
 export EDITOR=/usr/bin/vim
-#export PS1="\h:\w > "            # shell prompt format
 export LS_OPTIONS='--color=auto'
 alias ls='ls $LS_OPTIONS'
-#export PS1='\[\e[1;35m\]\h \[\e[0;32m\]: \u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
-#displays extra yam prompt when ./intelxx.yam is run
-#if [ -n "${YAM_HOST_TO_TARGET+x}" ]; then
-#   export PS1='\[\e[1;39m\]\h \[\e[0;34m\]: \u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[1;37m\](yam)\$\[\e[m\] \[\e[1;37m\]'
-#else
-#   export PS1='\[\e[1;39m\]\h \[\e[0;34m\]: \u\[\e[m\] \[\e[0;36m\]\w\[\e[m\] \[\e[1;37m\]\$\[\e[m\] \[\e[1;37m\]'
-#fi
+
+# PS1 settings from praveer
 # set prompt: ``hostname:/directory $ ''
 function prompt
 {
@@ -25,6 +19,7 @@ function prompt
    # export PS1="
    # ${GREEN}\u${CYAN}@${BLUE}\h ${CYAN}\w${RANDOM}
    # $ "
+   #displays extra yam prompt when ./intelxx.yam is run
 if [ -n "${YAM_HOST_TO_TARGET+x}" ]; then
 PS1="${GRAY}[|\t| ${GREEN}\u${WHITE}@${BLUE}\h:${CYAN}\W] \!${RANDOM}(yam)
 # " 
