@@ -21,11 +21,11 @@ function prompt
    # $ "
    #displays extra yam prompt when ./intelxx.yam is run
 if [ -n "${YAM_HOST_TO_TARGET+x}" ]; then
-PS1="${GRAY}[|\t| ${GREEN}\u${WHITE}@${BLUE}\h:${CYAN}\W] \!${RANDOM}(yam)
-# " 
+    PS1="${RANDOM}[${GRAY}|\t| ${GREEN}\u${WHITE}@${BLUE}\h:${CYAN}\w${RANDOM}] ${GREEN}< ${BLUE}\! ${GREEN}> ${WHITE}(yam)
+${RANDOM}# ${WHITE}" 
 else
-    PS1="${RANDOM}[${GRAY}|\t| ${GREEN}\u${RANDOM}@${BLUE}\h:${CYAN}\w${RANDOM}] ${GREEN}< ${BLUE}\! ${GREEN}> ${RANDOM}
-# " 
+    PS1="${RANDOM}[${GRAY}|\t| ${GREEN}\u${WHITE}@${BLUE}\h:${CYAN}\w${RANDOM}] ${GREEN}< ${BLUE}\! ${GREEN}> ${WHITE}
+${RANDOM}# ${WHITE}" 
 fi    
 
 }
